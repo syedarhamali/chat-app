@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+</head>
+<body>
+    <div class="logout">
+        <button onclick="logout()">Log Out</button>
+    </div>
+    <div class="container">
+        <h2>Sign Up</h2>
+        <input type="text" required placeholder="fullname" id="fullname">
+        <input type="email" required placeholder="email" id="email">
+        <input type="text" required placeholder="password" id="password">
+        <button onclick="signup()">Sign Up</button>
+    </div>
+    <br><br><br>
+    <div class="container">
+        <h2>Log In</h2>
+        <input type="email" required placeholder="email" id="user-email">
+        <input type="text" required placeholder="password" id="user-password">
+        <button onclick="login()">Sign In</button>
+    </div>
+    <br> <br> <br>
+    <div>
+        <h3>Users</h3>
+        <div id="users">
+            <button onclick=""></button>
+        </div>
+    </div>
+</body>
+<script type="module" src="./config/firebase.js"></script>
+<script type="module" src="app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.32/dist/sweetalert2.all.min.js"></script>
+</html>
