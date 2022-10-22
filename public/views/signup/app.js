@@ -6,6 +6,10 @@ window.signup = async function (){
     const password = document.getElementById("password").value;
     const fullname = document.getElementById("fullname").value;
     const profile = document.getElementById("image").files[0];
+    if(email == "" || password == "" || fullname == "" || profile == undefined){
+        alert("All the inputs required");
+        return;
+    }
     try{
         document.getElementsByClassName("btn-outline-dark")[0].style.display = "none"  
         document.getElementsByClassName("btn-outline-dark")[1].style.display = "inline-block"  
