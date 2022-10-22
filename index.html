@@ -1,38 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     <title>Chat App</title>
 </head>
-<body>
-    <div class="logout">
-        <button onclick="logout()">Log Out</button>
-    </div>
+
+<body class="bg-dark">
     <div class="container">
-        <h2>Sign Up</h2>
-        <input type="text" required placeholder="fullname" id="fullname">
-        <input type="email" required placeholder="email" id="email">
-        <input type="text" required placeholder="password" id="password">
-        <button onclick="signup()">Sign Up</button>
-    </div>
-    <br><br><br>
-    <div class="container">
-        <h2>Log In</h2>
-        <input type="email" required placeholder="email" id="user-email">
-        <input type="text" required placeholder="password" id="user-password">
-        <button onclick="login()">Sign In</button>
-    </div>
-    <br> <br> <br>
-    <div>
-        <h3>Users</h3>
-        <div id="users">
-            <button onclick=""></button>
-        </div>
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="card my-5">
+
+                    <div class="card-body cardbody-color p-lg-4">
+
+                        <div class="text-center">
+                            <img src="https://www.olx.com.pk/assets/iconProfilePicture.7975761176487dc62e25536d9a36a61d.png"
+                                class="img-fluid profile-image-pic img-thumbnail rounded-circle my-3" width="200px"
+                                alt="profile">
+                        </div>
+                        <h2 class="text-center mb-5">Welcome to Chat Application</h2>
+                        <div class="text-center"><a href="./views/sign in/index.html"><button type="submit"
+                                class="btn btn-outline-dark px-5 mb-5 w-100">Get Started</button></a></div>
+                    </div>
+                </div>
+            </div>
     </div>
 </body>
-<script type="module" src="./config/firebase.js"></script>
-<script type="module" src="app.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.32/dist/sweetalert2.all.min.js"></script>
 </html>

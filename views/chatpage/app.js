@@ -1,28 +1,29 @@
-import { checkRoom ,sendMessageToDb} from "../../config/firebase.js";
+import { getUsersFromDb, userLogout,checkRoom,auth} from "../../config/firebase.js";
 
-setTimeout(getRoom,2000);
-
-async function getRoom(){
-    const urlParams = new URLSearchParams(window.location.search);
-    const id = urlParams.get('id');
-    const chatRoom = await checkRoom(id);
-    console.log(chatRoom.id);
-    messageBox(chatRoom.id)
-}
-function messageBox(e){
-    let roomId = e;
-    document.getElementById("messageBox").innerHTML += `
-    <div>
-    <input id="message" type="text" placeholder="send a message" />
+    getUsers()
+async function getUsers(){
+   const users = await getUsersFromDb();
+   console.log(auth)
+   for(let item of users){
+    document.getElementById("users").innerHTML += `<li class="list-group-item d-flex justify-content-between align-items-start text-light bg-dark">
+    <img class="user-img bg-light" src='${item.imageUrl}'>
+    <div class="ms-2 me-auto">
+      <div class="fw-bold">${item.fullname} </div>
+      ${item.email}
     </div>
-    <div>
-    <button onclick="sendMessage('${roomId}')">Send</button>
-    </div>`
+    <span class="badge bg-primary rounded-pill"><button style="border:none;background:transparent;color:white" onclick="initiateChat('${item.userId}')">chat</button></span>
+  </li>`
+   }
 }
 
-window.sendMessage =  function(x){
+window.initiateChat= async function(friendId){
     debugger;
-    const ex = x;
-   var text = document.getElementById("message").value
-    sendMessageToDb(text,ex)
+    const chatRoom = await checkRoom(friendId);
+    window.location.href = `../chat/index.html?id=${chatRoom.id}`
+}
+
+
+window.logout = function (){
+    userLogout();
+    window.location.replace("../../index.html")
 }
