@@ -1,9 +1,8 @@
 import { getUsersFromDb, userLogout,checkRoom,auth} from "../../config/firebase.js";
 
-    getUsers()
+getUsers()
 async function getUsers(){
    const users = await getUsersFromDb();
-   console.log(auth)
    for(let item of users){
     document.getElementById("users").innerHTML += `<li class="list-group-item d-flex justify-content-between align-items-start text-light bg-dark">
     <img class="user-img bg-light" src='${item.imageUrl}'>
