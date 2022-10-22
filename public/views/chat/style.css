@@ -5,6 +5,7 @@ body{
 }
 #messages{
     padding: 10px;
+    padding-bottom: 75px;
 }
 .message-Box{
     position: relative;
