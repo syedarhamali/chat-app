@@ -16,10 +16,10 @@
         <div class="row">
             <div class="col-md-6 offset-md-3">
                 <h2 class="text-center text-light mt-1">Chat App</h2>
-                <div class="text-center mb-2 text-light">Sign Up</div>
+                <div class="text-center mb-2 text-light">Sign In</div>
                 <div class="card my-3">
 
-                    <div class="card-body cardbody-color p-lg-4">
+                    <div class="card-body cardbody-color p-lg-3">
 
                         <div class="text-center">
                             <img src="https://www.olx.com.pk/assets/iconProfilePicture.7975761176487dc62e25536d9a36a61d.png"
@@ -27,29 +27,22 @@
                                 alt="profile">
                         </div>
 
-                        <div class="mb-3">
-                            <input type="text" class="form-control" id="fullname" aria-describedby="emailHelp"
-                                placeholder="User Name">
-                        </div>
 
                         <div class="mb-3">
                             <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
-                                placeholder="Email">
+                                placeholder="Email" required>
                         </div>
 
                         <div class="mb-3">
-                            <input type="password" class="form-control" id="password" placeholder="password">
+                            <input type="password" class="form-control" id="password" placeholder="password" required>
                         </div>
-                        <div class="mb-3">
-                            <input type="file" class="form-control" id="image">
-                        </div>
-                        <p class="error" id="error" style="color: red;"></p>
-                        <div class="text-center"><button onclick="signup()"
-                                class="btn btn-outline-dark btn-color px-5 mb-5 w-100">Sign Up</button>
-                                <button style="width: 50%; display: none; height: 50px;background-color: black;" class="btn btn-outline-dark "><img style="max-width: 100%;max-height: 100%;" src="https://thumbs.gfycat.com/ZealousFineHochstettersfrog-size_restricted.gif" alt=""></button></div>
-                                
-                        <div id="emailHelp" class="form-text text-center mb-5 text-dark">Already
-                            Registered? <a href="../sign in/index.html" class="text-dark fw-bold"> Sign In</a>
+                        <p class="error" style="color: red;text-align: center;"></p>
+                        <div class="text-center"><button onclick="login()"
+                                class="btn btn-outline-dark btn-color px-5 mb-5 w-100">Login</button>
+                                <button style="width: 50%; display: none; height: 50px;background-color: black;" class="btn btn-outline-dark "><img style="max-width: 100%;max-height: 100%;" src="https://thumbs.gfycat.com/ZealousFineHochstettersfrog-size_restricted.gif" alt=""></button>
+                            </div>
+                        <div id="emailHelp" class="form-text text-center mb-5 text-dark">Not
+                            Registered? <a href="../signup/index.html" class="text-dark fw-bold"> Create An Account</a>
                         </div>
                     </div>
                 </div>
