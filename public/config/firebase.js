@@ -8,12 +8,7 @@ import { getStorage, ref, uploadBytes, getDownloadURL } from 'https://www.gstati
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyAVjPtxiiA7BduUW_RfwxMhaoVS4BozV8U",
-    authDomain: "chat-app-arhamm.firebaseapp.com",
-    projectId: "chat-app-arhamm",
-    storageBucket: "chat-app-arhamm.appspot.com",
-    messagingSenderId: "526667051985",
-    appId: "1:526667051985:web:9ad19401b866d20c77e6f0"
+
 };
 
 // Initialize Firebase
