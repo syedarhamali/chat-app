@@ -2,6 +2,17 @@ import {checkUser,signInFirebase} from '../../config/firebase.js'
 
 checkUser();
 
+var input = document.getElementById("password");
+// Execute a function when the user presses a key on the keyboard
+input.addEventListener("keypress", function(event) {
+    // If the user presses the "Enter" key on the keyboard
+    if (event.key === "Enter") {
+      // Cancel the default action, if needed
+      event.preventDefault();
+      // Trigger the button element with a click
+      document.getElementById("submitBtn").click();
+    }
+  });
 window.login = async function(){
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
